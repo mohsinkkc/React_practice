@@ -2,7 +2,7 @@ import { useState } from "react"
 
 function App() {
   
-  let [count,setcount] = useState(15)
+  let [count,setCount] = useState(0)
 
   const addvalue = ()=>{
     if (count < 20)
@@ -19,15 +19,14 @@ function App() {
     setcount(count - 1)
     console.log("clicked",count)
     }
-    
   }
   return (
     <>
     <h1>The Score is {count}</h1>
     <br/>
-    <button onClick={addvalue}>Add Points : {count}</button>
+    <button onClick={() => setCount(count + 1)}>Add Points : {count}</button>
     <br/>
-    <button onClick={minusvalue}>Minus Points {count}</button>
+    <button onClick={() => setCount(count - 1)}>Minus Points {count}</button>
      
     </>
   )
