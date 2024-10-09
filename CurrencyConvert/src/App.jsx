@@ -25,10 +25,15 @@ function App() {
   }
   return (
     <div
-        className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
-        style={{
-            backgroundImage: `url('https://images.pexels.com/photos/6770524/pexels-photo-6770524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
-        }}
+    className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+    style={{
+        backgroundImage: `url('https://images.pexels.com/photos/14902678/pexels-photo-14902678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundColor: '#f0f0f0', // Fallback background color
+        backgroundRepeat: 'no-repeat',
+        
+    }}
     >
         <div className="w-full">
             <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
@@ -41,12 +46,12 @@ function App() {
                 >
                     <div className="w-full mb-1">
                         <InputBox
-                            label="From"
-                            amount={amount}
-                            currencyOption={option}
-                            onCurrencychange={(currency) => setAmount(amount)}
-                            selectCurrency={from}
-                            onAmountChange={(amount) => setAmount(amount)}
+                        label="From"
+                        amount={amount}
+                        currencyOption={option}
+                        onCurrencychange={(amount) => setAmount(amount)}
+                        selectCurrency={from}
+                        onAmountChange={(amount) => setAmount(amount)}
                             
                         />
                     </div>
@@ -69,7 +74,7 @@ function App() {
                             amountDisable 
                         />
                     </div>
-                    <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
+                    <button type="submit" onClick={convert} className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
                         Convert {from.toUpperCase()} to {to.toUpperCase()}
                     </button>
                 </form>
