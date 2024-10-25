@@ -51,6 +51,7 @@ function App() {
                           <div key={todo.id} 
                           className='w-full'> 
                             <Todoitem todo={todo}/> 
+                            
                           </div>
                         ))}
                     </div>
