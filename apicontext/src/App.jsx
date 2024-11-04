@@ -50,10 +50,7 @@ function App() {
                         {todos.map((todo)=>(
                           <div key={todo.id} 
                           className='w-full'> 
-                            <Todoitem todo={todo}/> 
-
-                            
-                            
+                            <Todoitem todo={todo}/>
                           </div>
                         ))}
                     </div>
