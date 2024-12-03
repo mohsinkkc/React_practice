@@ -7,6 +7,10 @@ import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form'
 
 function Signup() {
+    const dispatch = useDispatch()
+    const {error,setError} = useState("")
+    const navigate = useNavigate()  
+    const {register,handleSubmit} = useForm()
   return (
     <div>Signup</div>
   )
